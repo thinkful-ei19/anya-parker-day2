@@ -3,13 +3,11 @@
 function decode(sentence) {
 	let words = sentence.split(' ');
 	let newWords = words.reduce(function(acc,word){
-		if (word.length < 3) {
+		if (word.length <= 3) {
 			acc += ' ';
-			console.log(acc);
 		}
 		else {
 			acc += (word[word.length-1].toUpperCase());
-			console.log(acc);
 		}
 		return acc;
 	}, '');
